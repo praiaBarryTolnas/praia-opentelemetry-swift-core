@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 class LoggerSharedState {
   var resource: Resource

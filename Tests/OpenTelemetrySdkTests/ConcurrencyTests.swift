@@ -31,7 +31,7 @@
     }
 
     func testBasicSpan() {
-      // Attempting to use `setActive` here will cause a build error since we're using `OpenTelemetryConcurrency.OpenTelemetry` instead of `OpenTelemetryApi.OpenTelemetry`
+      // Attempting to use `setActive` here will cause a build error since we're using `OpenTelemetryConcurrency.OpenTelemetry` instead of `PraiaOpenTelemetryApi.OpenTelemetry`
       tracer
         .spanBuilder(spanName: "basic")
         .withActiveSpan { span in

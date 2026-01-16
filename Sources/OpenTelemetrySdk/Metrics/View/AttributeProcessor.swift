@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public protocol AttributeProcessor {
   func process(incoming: [String: AttributeValue]) -> [String: AttributeValue]

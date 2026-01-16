@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 @testable import OpenTelemetrySdk
 import XCTest
 

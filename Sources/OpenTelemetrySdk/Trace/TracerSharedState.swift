@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// Represents the shared state/config between all Tracers created by the same TracerProvider.
 class TracerSharedState {

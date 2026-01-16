@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// representation of all data collected by the Span.
 public struct SpanData: Equatable, Codable, @unchecked Sendable {

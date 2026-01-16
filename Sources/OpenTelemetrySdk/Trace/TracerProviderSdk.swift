@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class TracerProviderSdk: TracerProvider {
   private let tracerLock: ReadWriteLock = .init()

@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public enum HistogramAggregatorError: Error {
   case unsupportedOperation(String)

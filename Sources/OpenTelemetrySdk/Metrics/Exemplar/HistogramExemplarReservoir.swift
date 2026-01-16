@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class HistogramExemplarReservoir: FixedSizedExemplarReservoir {
   init(clock: Clock, boundaries: [Double]) {
@@ -24,11 +24,11 @@ public class HistogramExemplarReservoir: FixedSizedExemplarReservoir {
       self.boundaries = boundaries
     }
 
-    func reservoirCellIndex(for cells: [ReservoirCell], value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Int {
+    func reservoirCellIndex(for cells: [ReservoirCell], value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Int {
       reservoirCellIndex(for: cells, value: Double(value), attributes: attributes)
     }
 
-    func reservoirCellIndex(for cells: [ReservoirCell], value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Int {
+    func reservoirCellIndex(for cells: [ReservoirCell], value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Int {
       if let index = boundaries.firstIndex(where: { boundary in
         value <= boundary
       }) {

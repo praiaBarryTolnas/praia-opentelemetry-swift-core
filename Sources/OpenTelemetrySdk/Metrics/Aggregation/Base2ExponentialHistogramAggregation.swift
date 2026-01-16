@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public final class Base2ExponentialHistogramAggregation: Aggregation, @unchecked Sendable {
   private static let defaultMaxBuckets = 160

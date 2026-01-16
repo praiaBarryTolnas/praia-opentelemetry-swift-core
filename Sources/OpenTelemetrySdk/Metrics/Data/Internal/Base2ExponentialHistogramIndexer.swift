@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public final class Base2ExponentialHistogramIndexer: Codable, @unchecked Sendable {
   nonisolated(unsafe) private static var cache = [Int: Base2ExponentialHistogramIndexer]()

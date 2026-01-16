@@ -5,7 +5,7 @@
 
 import Foundation
 import XCTest
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 final class SpanExceptionTests: XCTestCase {
   func testErrorAsSpanException() {

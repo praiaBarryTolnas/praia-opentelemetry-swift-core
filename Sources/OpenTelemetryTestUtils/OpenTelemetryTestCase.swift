@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@testable import OpenTelemetryApi
+@testable import PraiaOpenTelemetryApi
 @testable import OpenTelemetrySdk
 import XCTest
 
-typealias OpenTelemetry = OpenTelemetryApi.OpenTelemetry
+typealias OpenTelemetry = PraiaOpenTelemetryApi.OpenTelemetry
 
 /// A test case which runs its tests under (potentially) multiple context managers.
 ///

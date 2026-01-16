@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// SpanProcessor is the interface TracerSdk uses to allow synchronous hooks for when a Span
 /// is started or when a Span is ended.

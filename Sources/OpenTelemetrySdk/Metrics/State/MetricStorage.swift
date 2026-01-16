@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public enum MetricStorageConstants {
   static let MAX_CARDINALITY = 2_000

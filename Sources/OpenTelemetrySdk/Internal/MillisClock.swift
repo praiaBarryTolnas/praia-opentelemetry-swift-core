@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class MillisClock: Clock {
   ///  Returns a MillisClock

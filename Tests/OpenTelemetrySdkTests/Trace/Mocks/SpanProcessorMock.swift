@@ -5,7 +5,7 @@
 
 import Foundation
 import OpenTelemetrySdk
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 class SpanProcessorMock: SpanProcessor {
   var onStartCalledTimes = 0

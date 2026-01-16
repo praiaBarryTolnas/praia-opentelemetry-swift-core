@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongCounterMeterBuilderSdk: InstrumentBuilder, LongCounterBuilder {
   init(meterProviderSharedState: MeterProviderSharedState,

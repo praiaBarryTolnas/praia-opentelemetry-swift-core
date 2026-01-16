@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class DoubleGaugeSdk: DoubleGauge, Instrument {
   public var instrumentDescriptor: InstrumentDescriptor
@@ -19,7 +19,7 @@ public class DoubleGaugeSdk: DoubleGauge, Instrument {
     record(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func record(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func record(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     storage.recordDouble(value: value, attributes: attributes)
   }
 }

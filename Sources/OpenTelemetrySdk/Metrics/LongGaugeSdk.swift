@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongGaugeSdk: LongGauge, Instrument {
   public var instrumentDescriptor: InstrumentDescriptor
@@ -19,7 +19,7 @@ public class LongGaugeSdk: LongGauge, Instrument {
     record(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func record(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func record(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     storage.recordLong(value: value, attributes: attributes)
   }
 }

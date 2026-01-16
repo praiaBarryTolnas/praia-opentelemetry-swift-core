@@ -4,9 +4,9 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
-typealias _OpenTelemetry = OpenTelemetryApi.OpenTelemetry
+typealias _OpenTelemetry = PraiaOpenTelemetryApi.OpenTelemetry
 
 /// A wrapper type which provides a span builder just like `Tracer`, returns a type of `SpanBuilderBase` to hide APIs on `SpanBuilder` that aren't correctly usable when using a structured concurrency based context manager.
 public struct TracerWrapper: @unchecked Sendable {
@@ -41,12 +41,12 @@ public struct TracerProviderWrapper: @unchecked Sendable {
 
 /// The main interface for interacting with OpenTelemetry types.
 ///
-/// This type proxies its implementation to the `OpenTelemetryApi.OpenTelemetry` type, wrapping some of the results in new types to hide APIs that will not function correctly when using a context manager based on structured concurrency.
+/// This type proxies its implementation to the `PraiaOpenTelemetryApi.OpenTelemetry` type, wrapping some of the results in new types to hide APIs that will not function correctly when using a context manager based on structured concurrency.
 ///
-/// If you import this module and `OpenTelemetryApi` you will not be able to reference the `OpenTelemetry` type normally, because the names intentionally conflict. You can resolve this error with a typealias
+/// If you import this module and `PraiaOpenTelemetryApi` you will not be able to reference the `OpenTelemetry` type normally, because the names intentionally conflict. You can resolve this error with a typealias
 ///
 /// ```swift
-/// import OpenTelemetryApi
+/// import PraiaOpenTelemetryApi
 /// import OpenTelemetryConcurrency
 ///
 /// // This typealias will be preferred over the name in either package, so you only have to refer to the module name once

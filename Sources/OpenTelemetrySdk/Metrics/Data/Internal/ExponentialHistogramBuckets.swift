@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public protocol ExponentialHistogramBuckets: Codable {
   var scale: Int { get }

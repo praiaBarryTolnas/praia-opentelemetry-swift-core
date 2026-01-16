@@ -4,9 +4,9 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
-public class LoggerSdk: OpenTelemetryApi.Logger {
+public class LoggerSdk: PraiaOpenTelemetryApi.Logger {
   private let sharedState: LoggerSharedState
   private let instrumentationScope: InstrumentationScopeInfo
   private let eventDomain: String?
@@ -20,7 +20,7 @@ public class LoggerSdk: OpenTelemetryApi.Logger {
   }
 
   @available(*, deprecated, message: "Use logRecordBuilder() and setEventName(_:) instead")
-  public func eventBuilder(name: String) -> OpenTelemetryApi.EventBuilder {
+  public func eventBuilder(name: String) -> PraiaOpenTelemetryApi.EventBuilder {
     var builder = LogRecordBuilderSdk(sharedState: sharedState, instrumentationScope: instrumentationScope, includeSpanContext: true)
       .setEventName(name)
     
@@ -34,7 +34,7 @@ public class LoggerSdk: OpenTelemetryApi.Logger {
     return builder
   }
 
-  public func logRecordBuilder() -> OpenTelemetryApi.LogRecordBuilder {
+  public func logRecordBuilder() -> PraiaOpenTelemetryApi.LogRecordBuilder {
     return LogRecordBuilderSdk(sharedState: sharedState, instrumentationScope: instrumentationScope, includeSpanContext: true)
   }
 

@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public final class NoopLogRecordProcessor: LogRecordProcessor, @unchecked Sendable {
   public static let noopLogRecordProcessor = NoopLogRecordProcessor()

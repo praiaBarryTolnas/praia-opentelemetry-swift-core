@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// A clock that provides monotonic time tracking by combining wall clock time with DispatchTime.
 /// This clock is immune to system clock adjustments (NTP, user changes, etc.) and never goes backwards.

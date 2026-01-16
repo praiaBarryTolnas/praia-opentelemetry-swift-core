@@ -5,7 +5,7 @@
 
 import Foundation
 import XCTest
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 @testable import OpenTelemetrySdk
 
 class LoggerSharedStateTests: XCTestCase {

@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongSumAggregator: SumAggregator, Aggregator {
   private let reservoirSupplier: () -> ExemplarReservoir

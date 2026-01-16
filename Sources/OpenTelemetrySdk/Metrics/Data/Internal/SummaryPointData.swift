@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class SummaryPointData: PointData, Codable, @unchecked Sendable {
   public var count: UInt64

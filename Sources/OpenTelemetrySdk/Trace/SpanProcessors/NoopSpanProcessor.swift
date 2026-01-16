@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 struct NoopSpanProcessor: SpanProcessor {
   init() {}

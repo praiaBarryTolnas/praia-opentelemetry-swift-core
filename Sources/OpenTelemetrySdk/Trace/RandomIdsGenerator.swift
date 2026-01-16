@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public struct RandomIdGenerator: IdGenerator {
   public init() {}

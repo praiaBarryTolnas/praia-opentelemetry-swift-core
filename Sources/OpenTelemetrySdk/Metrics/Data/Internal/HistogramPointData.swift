@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class HistogramPointData: PointData, Codable, @unchecked Sendable {
   public var sum: Double

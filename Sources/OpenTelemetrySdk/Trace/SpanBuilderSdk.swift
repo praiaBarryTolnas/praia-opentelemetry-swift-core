@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// SpanBuilderSdk is SDK implementation of SpanBuilder.
 class SpanBuilderSdk: SpanBuilder {

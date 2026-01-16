@@ -4,7 +4,7 @@
 //
 
 import XCTest
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 @testable import OpenTelemetrySdk
 
 final class LogRecordBuilderSdkTests: XCTestCase {

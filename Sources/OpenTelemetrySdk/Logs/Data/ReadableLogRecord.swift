@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public struct ReadableLogRecord: Codable, @unchecked Sendable {
   public init(resource: Resource, instrumentationScopeInfo: InstrumentationScopeInfo, timestamp: Date, observedTimestamp: Date? = nil, spanContext: SpanContext? = nil, severity: Severity? = nil, body: AttributeValue? = nil, attributes: [String: AttributeValue], eventName: String? = nil) {

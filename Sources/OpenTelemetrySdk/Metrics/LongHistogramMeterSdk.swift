@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongHistogramMeterSdk: LongHistogram, Instrument {
   public var instrumentDescriptor: InstrumentDescriptor
@@ -19,7 +19,7 @@ public class LongHistogramMeterSdk: LongHistogram, Instrument {
     record(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func record(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func record(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     if value < 0 {
       print("Histograms can only record non-negative values. Instrument \(instrumentDescriptor.name) has recorded a negative value.")
       return

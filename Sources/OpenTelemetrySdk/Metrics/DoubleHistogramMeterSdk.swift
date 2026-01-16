@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class DoubleHistogramMeterSdk: DoubleHistogram, Instrument {
   public var instrumentDescriptor: InstrumentDescriptor
@@ -19,7 +19,7 @@ public class DoubleHistogramMeterSdk: DoubleHistogram, Instrument {
     record(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func record(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func record(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     if value < 0 {
       print("Histograms can only record non-negative values. Instrument \(instrumentDescriptor.name) has recorded a negative value.")
       return

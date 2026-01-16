@@ -4,24 +4,24 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class ExemplarReservoir {
   public func collectAndReset(attribute: [String: AttributeValue]) -> [ExemplarData] {
     return [ExemplarData]()
   }
 
-  public func offerDoubleMeasurement(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {}
+  public func offerDoubleMeasurement(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {}
 
-  public func offerLongMeasurement(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {}
+  public func offerLongMeasurement(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {}
 }
 
 public class NoopExemplarReservoir: ExemplarReservoir {
-  override public func offerDoubleMeasurement(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  override public func offerDoubleMeasurement(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     // noop
   }
 
-  override public func offerLongMeasurement(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  override public func offerLongMeasurement(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     // noop
   }
 
@@ -111,11 +111,11 @@ public class RandomFixedSizedExemplarReservoir: FixedSizedExemplarReservoir {
   class RandomCellSelector: ReservoirCellSelector {
     var numMeasurements: Locked<Int> = .init(initialValue: 0)
 
-    func reservoirCellIndex(for cells: [ReservoirCell], value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Int {
+    func reservoirCellIndex(for cells: [ReservoirCell], value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Int {
       return getIndex(cells: cells)
     }
 
-    func reservoirCellIndex(for cells: [ReservoirCell], value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Int {
+    func reservoirCellIndex(for cells: [ReservoirCell], value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Int {
       return getIndex(cells: cells)
     }
 

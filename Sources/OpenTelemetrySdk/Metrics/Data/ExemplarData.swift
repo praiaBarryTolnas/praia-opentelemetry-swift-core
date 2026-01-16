@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class ExemplarData: Equatable {
   init(epochNanos: UInt64, filteredAttributes: [String: AttributeValue], spanContext: SpanContext? = nil) {
@@ -15,7 +15,7 @@ public class ExemplarData: Equatable {
 
   public var filteredAttributes: [String: AttributeValue]
   public var epochNanos: UInt64
-  public var spanContext: OpenTelemetryApi.SpanContext?
+  public var spanContext: PraiaOpenTelemetryApi.SpanContext?
 
   public func isEqual(to other: ExemplarData) -> Bool {
     return epochNanos == other.epochNanos

@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LogRecordBuilderSdk: EventBuilder {
   private var sharedState: LoggerSharedState
@@ -39,13 +39,13 @@ public class LogRecordBuilderSdk: EventBuilder {
     return self
   }
 
-  public func setSpanContext(_ context: OpenTelemetryApi.SpanContext) -> Self {
+  public func setSpanContext(_ context: PraiaOpenTelemetryApi.SpanContext) -> Self {
     spanContext = context
 
     return self
   }
 
-  public func setSeverity(_ severity: OpenTelemetryApi.Severity) -> Self {
+  public func setSeverity(_ severity: PraiaOpenTelemetryApi.Severity) -> Self {
     self.severity = severity
     return self
   }
@@ -55,7 +55,7 @@ public class LogRecordBuilderSdk: EventBuilder {
     return self
   }
 
-  public func setAttributes(_ attributes: [String: OpenTelemetryApi.AttributeValue]) -> Self {
+  public func setAttributes(_ attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Self {
     self.attributes.updateValues(attributes: attributes)
     return self
   }

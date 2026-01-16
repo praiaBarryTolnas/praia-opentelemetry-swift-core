@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// TracerSdk is SDK implementation of Tracer.
 public class TracerSdk: Tracer {

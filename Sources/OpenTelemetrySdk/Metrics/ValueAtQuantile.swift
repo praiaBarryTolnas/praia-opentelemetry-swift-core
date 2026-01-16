@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public struct ValueAtQuantile: Codable {
   public let quantile: Double

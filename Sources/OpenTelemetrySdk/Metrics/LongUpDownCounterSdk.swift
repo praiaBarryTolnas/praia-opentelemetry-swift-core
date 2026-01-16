@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongUpDownCounterSdk: LongUpDownCounter, Instrument {
   public private(set) var instrumentDescriptor: InstrumentDescriptor
@@ -19,7 +19,7 @@ public class LongUpDownCounterSdk: LongUpDownCounter, Instrument {
     add(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func add(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func add(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     storage.recordLong(value: value, attributes: attributes)
   }
 }

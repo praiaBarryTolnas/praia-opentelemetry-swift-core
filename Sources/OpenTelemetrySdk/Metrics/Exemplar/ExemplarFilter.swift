@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public protocol ExemplarFilter {
   func shouldSampleMeasurement(value: Int, attributes: [String: AttributeValue]) -> Bool
@@ -14,11 +14,11 @@ public protocol ExemplarFilter {
 public struct AlwaysOnFilter: ExemplarFilter {
   public init() {}
 
-  public func shouldSampleMeasurement(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Bool {
+  public func shouldSampleMeasurement(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Bool {
     return true
   }
 
-  public func shouldSampleMeasurement(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Bool {
+  public func shouldSampleMeasurement(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Bool {
     return true
   }
 }
@@ -26,11 +26,11 @@ public struct AlwaysOnFilter: ExemplarFilter {
 public struct AlwaysOffFilter: ExemplarFilter {
   public init() {}
 
-  public func shouldSampleMeasurement(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Bool {
+  public func shouldSampleMeasurement(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Bool {
     false
   }
 
-  public func shouldSampleMeasurement(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Bool {
+  public func shouldSampleMeasurement(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Bool {
     false
   }
 }
@@ -38,11 +38,11 @@ public struct AlwaysOffFilter: ExemplarFilter {
 public struct TraceBasedFilter: ExemplarFilter {
   public init() {}
 
-  public func shouldSampleMeasurement(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Bool {
+  public func shouldSampleMeasurement(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Bool {
     hasSampledTrace()
   }
 
-  public func shouldSampleMeasurement(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) -> Bool {
+  public func shouldSampleMeasurement(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Bool {
     hasSampledTrace()
   }
 

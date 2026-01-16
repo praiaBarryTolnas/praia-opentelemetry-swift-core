@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 import OpenTelemetrySdk
 
 class SpanMock: Span {
@@ -31,7 +31,7 @@ class SpanMock: Span {
 
   func setAttribute(key: String, value: AttributeValue?) {}
 
-  func setAttributes(_ attributes: [String : OpenTelemetryApi.AttributeValue]) {}
+  func setAttributes(_ attributes: [String : PraiaOpenTelemetryApi.AttributeValue]) {}
 
   func addEvent(name: String) {}
 

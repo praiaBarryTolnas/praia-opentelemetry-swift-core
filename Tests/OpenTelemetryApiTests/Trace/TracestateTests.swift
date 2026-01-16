@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 import XCTest
 
 final class TraceStateTests: XCTestCase, @unchecked Sendable {

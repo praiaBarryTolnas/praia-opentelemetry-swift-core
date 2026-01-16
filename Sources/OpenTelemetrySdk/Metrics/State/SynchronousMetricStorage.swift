@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 enum MetricStoreError: Error {
   case maxCardinality
@@ -99,7 +99,7 @@ public class SynchronousMetricStorage: SynchronousMetricStorageProtocol {
     false
   }
 
-  public func recordLong(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func recordLong(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     do {
       let handle = try getAggregatorHandle(attributes: attributes)
       handle.recordLong(value: value, attributes: attributes)
@@ -110,7 +110,7 @@ public class SynchronousMetricStorage: SynchronousMetricStorageProtocol {
     }
   }
 
-  public func recordDouble(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func recordDouble(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     do {
       let handle = try getAggregatorHandle(attributes: attributes)
       handle.recordDouble(value: value, attributes: attributes)

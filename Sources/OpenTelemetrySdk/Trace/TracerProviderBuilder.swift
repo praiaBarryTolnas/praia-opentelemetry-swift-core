@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class TracerProviderBuilder {
   public private(set) var clock: Clock = MillisClock()

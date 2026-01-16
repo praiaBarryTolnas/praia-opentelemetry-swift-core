@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 class MultiWritableMetricStorage: WritableMetricStorage {
   var storages: [WritableMetricStorage]
@@ -13,13 +13,13 @@ class MultiWritableMetricStorage: WritableMetricStorage {
     self.storages = storages
   }
 
-  func recordLong(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  func recordLong(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     for var storage in storages {
       storage.recordLong(value: value, attributes: attributes)
     }
   }
 
-  func recordDouble(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  func recordDouble(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     for var storage in storages {
       storage.recordDouble(value: value, attributes: attributes)
     }

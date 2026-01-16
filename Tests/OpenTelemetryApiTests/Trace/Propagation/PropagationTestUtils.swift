@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 struct TestSetter: Setter {
   func set(carrier: inout [String: String], key: String, value: String) {

@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongPointData: PointData, Codable, @unchecked Sendable {
   public var value: Int

@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 import XCTest
 import OpenTelemetryTestUtils
 @testable import OpenTelemetrySdk

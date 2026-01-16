@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// Holds information about the instrumentation library specified when creating an instance of
 /// TracerSdk using TracerProviderSdk.

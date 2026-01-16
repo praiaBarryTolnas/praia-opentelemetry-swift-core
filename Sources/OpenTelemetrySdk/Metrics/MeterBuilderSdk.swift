@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class MeterBuilderSdk: MeterBuilder {
   private let registry: ReadWriteLocked<ComponentRegistry<MeterSdk>>
@@ -28,7 +28,7 @@ public class MeterBuilderSdk: MeterBuilder {
     return self
   }
 
-  public func setAttributes(attributes: [String: OpenTelemetryApi.AttributeValue]) -> Self {
+  public func setAttributes(attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Self {
     self.attributes = attributes
     return self
   }

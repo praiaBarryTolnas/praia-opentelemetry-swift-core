@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 @available(*, deprecated, renamed: "SpanSdk")
 public typealias RecordEventsReadableSpan = SpanSdk

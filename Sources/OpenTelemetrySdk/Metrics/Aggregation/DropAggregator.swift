@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public final class DropAggregator: Aggregator, @unchecked Sendable {
   public static let POINT_DATA = PointData(startEpochNanos: 0, endEpochNanos: 0, attributes: [String: AttributeValue](), exemplars: [ExemplarData]())

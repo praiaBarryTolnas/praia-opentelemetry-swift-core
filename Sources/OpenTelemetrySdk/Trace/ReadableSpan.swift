@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// The extend Span interface used by the SDK.
 public protocol ReadableSpan: Span, Sendable {

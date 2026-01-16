@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 @available(*, deprecated, renamed: "ObservableMeasurementSdk")
 public typealias StableObservableMeasurementSdk = ObservableMeasurementSdk
@@ -38,7 +38,7 @@ public class ObservableMeasurementSdk: ObservableLongMeasurement, ObservableDoub
     record(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func record(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func record(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     record(value: Double(value), attributes: attributes)
   }
 
@@ -46,7 +46,7 @@ public class ObservableMeasurementSdk: ObservableLongMeasurement, ObservableDoub
     record(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func record(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func record(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     doRecord(measurement: Measurement.doubleMeasurement(startEpochNano: startEpochNanos, endEpochNano: epochNanos, value: value, attributes: attributes))
   }
 

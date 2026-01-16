@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /// Struct to access a set of pre-defined Samplers.
 public enum Samplers {

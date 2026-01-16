@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class MeterProviderSharedState {
   public init(clock: Clock, resource: Resource, startEpochNanos: UInt64, exemplarFilter: ExemplarFilter) {

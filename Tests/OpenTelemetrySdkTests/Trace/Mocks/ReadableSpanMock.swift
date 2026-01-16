@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 @testable import OpenTelemetrySdk
 
 class ReadableSpanMock: ReadableSpan, @unchecked Sendable {
@@ -54,11 +54,11 @@ class ReadableSpanMock: ReadableSpan, @unchecked Sendable {
 
   func setAttribute(key: String, value: AttributeValue?) {}
 
-  func getAttributes() -> [String : OpenTelemetryApi.AttributeValue] {
+  func getAttributes() -> [String : PraiaOpenTelemetryApi.AttributeValue] {
     return [:]
   }
 
-  func setAttributes(_ attributes: [String : OpenTelemetryApi.AttributeValue]) {}
+  func setAttributes(_ attributes: [String : PraiaOpenTelemetryApi.AttributeValue]) {}
 
   func addEvent(name: String) {}
 

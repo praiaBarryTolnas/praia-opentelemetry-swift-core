@@ -17,10 +17,10 @@ Pod::Spec.new do |spec|
   spec.tvos.deployment_target = "12.0"
   spec.watchos.deployment_target = "4.0"
   spec.visionos.deployment_target = "1.0"
-  spec.module_name = "OpenTelemetryApi"
-  # This is necessary because we use the `package` keyword to access some properties in `OpenTelemetryApi`
+  spec.module_name = "PraiaOpenTelemetryApi"
+  # This is necessary because we use the `package` keyword to access some properties in `PraiaOpenTelemetryApi`
   # This keyword was introduced in Swift 5.9 and it's tightly bound to SPM.
   # To provide the correct values to the flags `-package-name` and `-module-name` we checked out the outputs from:
   # `swift build --verbose`
-  spec.pod_target_xcconfig = { "OTHER_SWIFT_FLAGS" => "-module-name OpenTelemetryApi -package-name opentelemetry_swift" }
+  spec.pod_target_xcconfig = { "OTHER_SWIFT_FLAGS" => "-module-name PraiaOpenTelemetryApi -package-name opentelemetry_swift" }
 end

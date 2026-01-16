@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class DoubleUpDownCounterBuilderSdk: InstrumentBuilder, DoubleUpDownCounterBuilder {
   init(meterProviderSharedState: MeterProviderSharedState,

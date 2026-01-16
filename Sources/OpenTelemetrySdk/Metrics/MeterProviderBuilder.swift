@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 @available(*, deprecated, renamed: "MeterProviderBuilder")
 public typealias StableMeterProviderBuilder = MeterProviderBuilder

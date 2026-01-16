@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public final class LoggerProviderSdk: LoggerProvider, @unchecked Sendable {
   private let sharedState: LoggerSharedState
@@ -23,11 +23,11 @@ public final class LoggerProviderSdk: LoggerProvider, @unchecked Sendable {
     }
   }
 
-  public func get(instrumentationScopeName: String) -> OpenTelemetryApi.Logger {
+  public func get(instrumentationScopeName: String) -> PraiaOpenTelemetryApi.Logger {
     return loggerRegistry.get(name: instrumentationScopeName, version: nil, schemaUrl: nil)
   }
 
-  public func loggerBuilder(instrumentationScopeName: String) -> OpenTelemetryApi.LoggerBuilder {
+  public func loggerBuilder(instrumentationScopeName: String) -> PraiaOpenTelemetryApi.LoggerBuilder {
     return LoggerBuilderSdk(registry: loggerRegistry, instrumentationScopeName: instrumentationScopeName)
   }
 }

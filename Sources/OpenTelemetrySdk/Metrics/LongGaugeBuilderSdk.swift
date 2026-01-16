@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongGaugeBuilderSdk: InstrumentBuilder, LongGaugeBuilder {
   init(meterProviderSharedState: MeterProviderSharedState, meterSharedState: MeterSharedState, name: String, description: String, unit: String) {

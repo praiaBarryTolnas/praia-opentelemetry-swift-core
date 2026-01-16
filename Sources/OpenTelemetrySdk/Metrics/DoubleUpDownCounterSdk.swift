@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class DoubleUpDownCounterSdk: DoubleUpDownCounter, Instrument {
   public private(set) var instrumentDescriptor: InstrumentDescriptor
@@ -19,7 +19,7 @@ public class DoubleUpDownCounterSdk: DoubleUpDownCounter, Instrument {
     add(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func add(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func add(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     storage.recordDouble(value: value, attributes: attributes)
   }
 }

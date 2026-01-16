@@ -4,7 +4,7 @@
 // 
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 extension Dictionary.Keys where Key == String, Value == AttributeValue {
   public func contains(_ element: any RawRepresentable<String>) -> Bool {

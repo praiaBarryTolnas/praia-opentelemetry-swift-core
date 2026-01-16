@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class BatchLogRecordProcessor: LogRecordProcessor {
   fileprivate var worker: BatchWorker

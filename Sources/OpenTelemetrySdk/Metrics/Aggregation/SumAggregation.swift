@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public final class SumAggregation: Aggregation, @unchecked Sendable {
   public static let instance = SumAggregation()

@@ -6,7 +6,7 @@
 import Foundation
 import XCTest
 @testable import OpenTelemetrySdk
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 class MockMetricExporter: MetricExporter {
   public var exportData: [MetricData] = .init()

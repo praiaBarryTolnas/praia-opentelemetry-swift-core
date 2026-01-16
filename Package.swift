@@ -14,7 +14,7 @@ let package = Package(
     .visionOS(.v1),
   ],
   products: [
-    .library(name: "OpenTelemetryApi", targets: ["OpenTelemetryApi"]),
+    .library(name: "PraiaOpenTelemetryApi", targets: ["PraiaOpenTelemetryApi"]),
     .library(name: "OpenTelemetryConcurrency", targets: ["OpenTelemetryConcurrency"]),
     .library(name: "OpenTelemetrySdk", targets: ["OpenTelemetrySdk"]),
     .library(name: "StdoutExporter", targets: ["StdoutExporter"]),
@@ -25,19 +25,20 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "OpenTelemetryApi",
-      dependencies: []
+      name: "PraiaOpenTelemetryApi",
+      dependencies: [],
+      path: "Sources/OpenTelemetryApi"
     ),
     .target(
       name: "OpenTelemetrySdk",
       dependencies: [
-        "OpenTelemetryApi",
+        "PraiaOpenTelemetryApi",
         .product(name: "Atomics", package: "swift-atomics", condition: .when(platforms: [.linux])),
       ]
     ),
     .target(
       name: "OpenTelemetryConcurrency",
-      dependencies: ["OpenTelemetryApi"]
+      dependencies: ["PraiaOpenTelemetryApi"]
     ),
     .target(
       name: "StdoutExporter",
@@ -46,11 +47,11 @@ let package = Package(
     ),
     .target(
       name: "OpenTelemetryTestUtils",
-      dependencies: ["OpenTelemetryApi", "OpenTelemetrySdk"]
+      dependencies: ["PraiaOpenTelemetryApi", "OpenTelemetrySdk"]
     ),
     .testTarget(
       name: "OpenTelemetryApiTests",
-      dependencies: ["OpenTelemetryApi", "OpenTelemetryTestUtils"],
+      dependencies: ["PraiaOpenTelemetryApi", "OpenTelemetryTestUtils"],
       path: "Tests/OpenTelemetryApiTests",
       swiftSettings: [.unsafeFlags(["-Xfrontend", "-disable-availability-checking", "-strict-concurrency=minimal"])]
     ),

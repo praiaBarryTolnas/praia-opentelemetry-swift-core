@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongCounterSdk: LongCounter, Instrument {
   public var instrumentDescriptor: InstrumentDescriptor
@@ -19,7 +19,7 @@ public class LongCounterSdk: LongCounter, Instrument {
     add(value: value, attributes: [String: AttributeValue]())
   }
 
-  public func add(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public func add(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     if value < 0 {
       // todo : error log
       return
@@ -41,7 +41,7 @@ public struct DoubleCounterSdk: DoubleCounter, Instrument {
     add(value: value, attributes: [String: AttributeValue]())
   }
 
-  public mutating func add(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  public mutating func add(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     if value < 0 {
       // todo: error log
       return

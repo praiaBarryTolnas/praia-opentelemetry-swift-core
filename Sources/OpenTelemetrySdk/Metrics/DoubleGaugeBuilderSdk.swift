@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class DoubleGaugeBuilderSdk: InstrumentBuilder, DoubleGaugeBuilder {
   init(meterProviderSharedState: MeterProviderSharedState, meterSharedState: MeterSharedState, name: String) {

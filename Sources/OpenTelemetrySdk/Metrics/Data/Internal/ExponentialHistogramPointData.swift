@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class ExponentialHistogramPointData: PointData, Codable, @unchecked Sendable {
   public var scale: Int

@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LongToDoubleExemplarReservoir: ExemplarReservoir {
   let reservoir: ExemplarReservoir
@@ -17,11 +17,11 @@ public class LongToDoubleExemplarReservoir: ExemplarReservoir {
     return reservoir.collectAndReset(attribute: attribute)
   }
 
-  override public func offerDoubleMeasurement(value: Double, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  override public func offerDoubleMeasurement(value: Double, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     return reservoir.offerDoubleMeasurement(value: value, attributes: attributes)
   }
 
-  override public func offerLongMeasurement(value: Int, attributes: [String: OpenTelemetryApi.AttributeValue]) {
+  override public func offerLongMeasurement(value: Int, attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) {
     return offerDoubleMeasurement(value: Double(value), attributes: attributes)
   }
 }

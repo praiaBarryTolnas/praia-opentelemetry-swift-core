@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class DoubleBase2ExponentialHistogramBuckets:
   ExponentialHistogramBuckets, NSCopying {

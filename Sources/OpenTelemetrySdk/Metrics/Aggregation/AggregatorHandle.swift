@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 protocol AggregatorHandleProtocol {
   func doAggregateThenMaybeReset(startEpochNano: Int, endEpochNano: Int, attributes: [String: AttributeValue], reset: Bool) -> PointData

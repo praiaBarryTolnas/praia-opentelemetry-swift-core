@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 public class LoggerBuilderSdk: LoggerBuilder {
   private let registry: ComponentRegistry<LoggerSdk>
@@ -41,12 +41,12 @@ public class LoggerBuilderSdk: LoggerBuilder {
     return self
   }
 
-  public func setAttributes(_ attributes: [String: OpenTelemetryApi.AttributeValue]) -> Self {
+  public func setAttributes(_ attributes: [String: PraiaOpenTelemetryApi.AttributeValue]) -> Self {
     self.attributes = attributes
     return self
   }
 
-  public func build() -> OpenTelemetryApi.Logger {
+  public func build() -> PraiaOpenTelemetryApi.Logger {
     var logger = registry.get(
       name: instrumentationScopeName,
       version: instrumentationScopeVersion,

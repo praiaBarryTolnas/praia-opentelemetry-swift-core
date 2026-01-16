@@ -4,7 +4,7 @@
  */
 
 import Foundation
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 
 /**
  * Implementation of a EnvironmentContextPropagation propagation, using W3CTraceContextPropagator

@@ -5,7 +5,7 @@
 
 import Foundation
 @testable import OpenTelemetrySdk
-import OpenTelemetryApi
+import PraiaOpenTelemetryApi
 import XCTest
 
 class ComponentRegistryTests: XCTestCase {
